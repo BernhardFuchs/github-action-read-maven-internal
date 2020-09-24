@@ -1,0 +1,11 @@
+name: read-maven-internal
+description: Enable workflow to use dependencies in an internal maven repo
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.server_id }}
+inputs:
+  server_id:
+    description: Maven server id
+    required: true
